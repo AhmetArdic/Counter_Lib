@@ -115,9 +115,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad5ba456c3dce8f6c2d099e94dc097ceb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8h.html#ad5ba456c3dce8f6c2d099e94dc097ceb">counter_get_name</a> (<a class="el" href="struct_counter__t.html">Counter_t</a> *counter)</td></tr>
 <tr class="memdesc:ad5ba456c3dce8f6c2d099e94dc097ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bir sayacin ismini donduren fonksiyon.  <br /></td></tr>
 <tr class="separator:ad5ba456c3dce8f6c2d099e94dc097ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1e71d72aebac425caf18f49463cf8ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8h.html#ae1e71d72aebac425caf18f49463cf8ee">counter_call</a> (void)</td></tr>
-<tr class="memdesc:ae1e71d72aebac425caf18f49463cf8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sayacları isleyen fonksiyon.  <br /></td></tr>
-<tr class="separator:ae1e71d72aebac425caf18f49463cf8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8411a6856390fa72383761aa2a1a2b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8h.html#af8411a6856390fa72383761aa2a1a2b2">counters_call</a> (void)</td></tr>
+<tr class="memdesc:af8411a6856390fa72383761aa2a1a2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sayacları isleyen fonksiyon.  <br /></td></tr>
+<tr class="separator:af8411a6856390fa72383761aa2a1a2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a1d828ce45abca137bbbda7f69665923b" name="a1d828ce45abca137bbbda7f69665923b"></a>
@@ -177,35 +177,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Counter_t* Olusturulan yeni sayacin isaretcisi (NULL, eger sayac ekleme islemi basarisiz ise) </dd></dl>
-
-</div>
-</div>
-<a id="ae1e71d72aebac425caf18f49463cf8ee" name="ae1e71d72aebac425caf18f49463cf8ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1e71d72aebac425caf18f49463cf8ee">&#9670;&#160;</a></span>counter_call()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void counter_call </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sayacları isleyen fonksiyon. </p>
-<p>Bu fonksiyon, timer interrupt icerisinde cagrilir ve counter_list dizisindeki sayacları periyodik olarak isler. Her bir sayac icin asagidaki islemleri gerceklestirir:</p><ul>
-<li>Sayac kullaniliyorsa ve etkinse, sayaç degerini bir artirir.</li>
-<li>Sayac hedef degeri asildiginda, sayac degerini sifirlar.</li>
-<li>Sayac icin belirtilmis olan geri çagırma islevini (callback function) çagirir (eger varsa).</li>
-<li>Sayac icin belirtilmic olan bayrak (flag) degiskenini 1 olarak ayarlar (eger varsa).</li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>Bu fonksiyon, MAX_COUNTER sabitinde belirtilen maksimum sayaç sayisini kullanir ve counter_list dizisindeki sayaclari isler. </dd>
-<dd>
-Bu fonksiyonun verimli sekilde calismasi icin void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) icerisinde cagrilmalidir. </dd></dl>
 
 </div>
 </div>
@@ -397,6 +368,35 @@ Bu fonksiyonun verimli sekilde calismasi icin void HAL_TIM_PeriodElapsedCallback
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="af8411a6856390fa72383761aa2a1a2b2" name="af8411a6856390fa72383761aa2a1a2b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8411a6856390fa72383761aa2a1a2b2">&#9670;&#160;</a></span>counters_call()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void counters_call </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sayacları isleyen fonksiyon. </p>
+<p>Bu fonksiyon, timer interrupt icerisinde cagrilir ve counter_list dizisindeki sayacları periyodik olarak isler. Her bir sayac icin asagidaki islemleri gerceklestirir:</p><ul>
+<li>Sayac kullaniliyorsa ve etkinse, sayaç degerini bir artirir.</li>
+<li>Sayac hedef degeri asildiginda, sayac degerini sifirlar.</li>
+<li>Sayac icin belirtilmis olan geri çagırma islevini (callback function) çagirir (eger varsa).</li>
+<li>Sayac icin belirtilmic olan bayrak (flag) degiskenini 1 olarak ayarlar (eger varsa).</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Bu fonksiyon, MAX_COUNTER sabitinde belirtilen maksimum sayaç sayisini kullanir ve counter_list dizisindeki sayaclari isler. </dd>
+<dd>
+Bu fonksiyonun verimli sekilde calismasi icin void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) icerisinde cagrilmalidir. </dd></dl>
 
 </div>
 </div>

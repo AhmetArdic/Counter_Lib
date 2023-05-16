@@ -26,7 +26,7 @@ int16\+\_\+t \mbox{\hyperlink{counter_8h_a93e7fd3747751035ed06e4a59477a0aa}{coun
 \begin{DoxyCompactList}\small\item\em Counter\textquotesingle{}in geçerli sayac degerini donduren bir fonksiyon. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{counter_8h_ad5ba456c3dce8f6c2d099e94dc097ceb}{counter\+\_\+get\+\_\+name}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
 \begin{DoxyCompactList}\small\item\em Bir sayacin ismini donduren fonksiyon. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{counter_8h_ae1e71d72aebac425caf18f49463cf8ee}{counter\+\_\+call}} (void)
+void \mbox{\hyperlink{counter_8h_af8411a6856390fa72383761aa2a1a2b2}{counters\+\_\+call}} (void)
 \begin{DoxyCompactList}\small\item\em Sayacları isleyen fonksiyon. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -59,29 +59,6 @@ Bu fonksiyon, verilen parametrelerle yeni bir sayac oluşturur ve global sayac l
 \begin{DoxyReturn}{Returns}
 Counter\+\_\+t$\ast$ Olusturulan yeni sayacin isaretcisi (NULL, eger sayac ekleme islemi basarisiz ise) 
 \end{DoxyReturn}
-\mbox{\Hypertarget{counter_8h_ae1e71d72aebac425caf18f49463cf8ee}\label{counter_8h_ae1e71d72aebac425caf18f49463cf8ee}} 
-\index{counter.h@{counter.h}!counter\_call@{counter\_call}}
-\index{counter\_call@{counter\_call}!counter.h@{counter.h}}
-\doxysubsubsection{\texorpdfstring{counter\_call()}{counter\_call()}}
-{\footnotesize\ttfamily void counter\+\_\+call (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
-
-
-
-Sayacları isleyen fonksiyon. 
-
-Bu fonksiyon, timer interrupt icerisinde cagrilir ve counter\+\_\+list dizisindeki sayacları periyodik olarak isler. Her bir sayac icin asagidaki islemleri gerceklestirir\+:
-\begin{DoxyItemize}
-\item Sayac kullaniliyorsa ve etkinse, sayaç degerini bir artirir.
-\item Sayac hedef degeri asildiginda, sayac degerini sifirlar.
-\item Sayac icin belirtilmis olan geri çagırma islevini (callback function) çagirir (eger varsa).
-\item Sayac icin belirtilmic olan bayrak (flag) degiskenini 1 olarak ayarlar (eger varsa).
-\end{DoxyItemize}
-
-\begin{DoxyNote}{Note}
-Bu fonksiyon, MAX\+\_\+\+COUNTER sabitinde belirtilen maksimum sayaç sayisini kullanir ve counter\+\_\+list dizisindeki sayaclari isler. 
-
-Bu fonksiyonun verimli sekilde calismasi icin void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback(\+TIM\+\_\+\+Handle\+Type\+Def $\ast$htim) icerisinde cagrilmalidir. 
-\end{DoxyNote}
 \mbox{\Hypertarget{counter_8h_ad364fa4e15e88a72d7c0626ea98be8ac}\label{counter_8h_ad364fa4e15e88a72d7c0626ea98be8ac}} 
 \index{counter.h@{counter.h}!counter\_delete@{counter\_delete}}
 \index{counter\_delete@{counter\_delete}!counter.h@{counter.h}}
@@ -207,3 +184,26 @@ Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcis
 {\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turunde bir isaretci. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{counter_8h_af8411a6856390fa72383761aa2a1a2b2}\label{counter_8h_af8411a6856390fa72383761aa2a1a2b2}} 
+\index{counter.h@{counter.h}!counters\_call@{counters\_call}}
+\index{counters\_call@{counters\_call}!counter.h@{counter.h}}
+\doxysubsubsection{\texorpdfstring{counters\_call()}{counters\_call()}}
+{\footnotesize\ttfamily void counters\+\_\+call (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sayacları isleyen fonksiyon. 
+
+Bu fonksiyon, timer interrupt icerisinde cagrilir ve counter\+\_\+list dizisindeki sayacları periyodik olarak isler. Her bir sayac icin asagidaki islemleri gerceklestirir\+:
+\begin{DoxyItemize}
+\item Sayac kullaniliyorsa ve etkinse, sayaç degerini bir artirir.
+\item Sayac hedef degeri asildiginda, sayac degerini sifirlar.
+\item Sayac icin belirtilmis olan geri çagırma islevini (callback function) çagirir (eger varsa).
+\item Sayac icin belirtilmic olan bayrak (flag) degiskenini 1 olarak ayarlar (eger varsa).
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, MAX\+\_\+\+COUNTER sabitinde belirtilen maksimum sayaç sayisini kullanir ve counter\+\_\+list dizisindeki sayaclari isler. 
+
+Bu fonksiyonun verimli sekilde calismasi icin void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback(\+TIM\+\_\+\+Handle\+Type\+Def $\ast$htim) icerisinde cagrilmalidir. 
+\end{DoxyNote}

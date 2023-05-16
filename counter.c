@@ -228,7 +228,7 @@ char* counter_get_name(Counter_t* counter){
  * @note Bu fonksiyonun verimli sekilde calismasi icin void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) icerisinde
  * cagrilmalidir.
  */
-void counter_call(void){
+void counters_call(void){
 	for(int i=0 ; i<MAX_COUNTER ; ++i){
 		Counter_t *temp_counter = &counter_list[i];
 		if(temp_counter->use){

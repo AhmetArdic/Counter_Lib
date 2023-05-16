@@ -71,7 +71,7 @@ void counter_reset(Counter_t* counter);
 int16_t counter_get_count(Counter_t* counter);
 char* counter_get_name(Counter_t* counter);
 
-void counter_call(void);
+void counters_call(void);
 
 
 #endif /* COUNTER_H_ */
