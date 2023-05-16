@@ -1,0 +1,31 @@
+\hypertarget{counter_8h_source}{}\doxysection{counter.\+h}
+\mbox{\hyperlink{counter_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#ifndef\ COUNTER\_H\_}}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ COUNTER\_H\_}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00055\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_counter__t_aa60ab087ed16d96829d8a7ae1fe023c1}{use}};\ }
+\DoxyCodeLine{00056\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{struct_counter__t_abd5caca4e33d2a54a97dcf6c21c8150e}{enable}};\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{char}\ name[16];\ }
+\DoxyCodeLine{00058\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_counter__t_aadecefcb9748ed847d5ced60d021b888}{count}};\ }
+\DoxyCodeLine{00059\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_counter__t_ac55af2d0869b2350da9c19a5930d4fe9}{target}};\ }
+\DoxyCodeLine{00060\ \ \ \ \ uint8\_t*\ \mbox{\hyperlink{struct_counter__t_a266bc083b3d5697629b0f72950995fca}{flag}};\ }
+\DoxyCodeLine{00061\ \ \ \ \ void\ (*callback\_function)(void);\ }
+\DoxyCodeLine{00062\ \}\ \mbox{\hyperlink{struct_counter__t}{Counter\_t}};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ \mbox{\hyperlink{counter_8h_a1d828ce45abca137bbbda7f69665923b}{counter\_add}}(\textcolor{keywordtype}{char}*\ name,\ uint8\_t\ inital\_enable,\ uint16\_t\ target,\ uint8\_t*\ flag,\ \textcolor{keywordtype}{void}\ (*callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{counter_8h_ad364fa4e15e88a72d7c0626ea98be8ac}{counter\_delete}}(\mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ counter);}
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{counter_8h_a47ad5db7cadc8c226aa61a201e888094}{counter\_start}}(\mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ counter);}
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{counter_8h_aea337d5e125c883e6aa1ff65ec92f006}{counter\_stop}}(\mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ counter);}
+\DoxyCodeLine{00069\ int16\_t\ \mbox{\hyperlink{counter_8h_a93e7fd3747751035ed06e4a59477a0aa}{counter\_get\_count}}(\mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ counter);}
+\DoxyCodeLine{00070\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{counter_8h_ad5ba456c3dce8f6c2d099e94dc097ceb}{counter\_get\_name}}(\mbox{\hyperlink{struct_counter__t}{Counter\_t}}*\ counter);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{counter_8h_ae1e71d72aebac425caf18f49463cf8ee}{counter\_call}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ COUNTER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

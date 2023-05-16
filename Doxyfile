@@ -1,0 +1,25 @@
+# Doxygen Configuration File
+
+# Proje adı
+PROJECT_NAME = "Counter_Lib"
+
+# Proje sürümü
+PROJECT_VERSION = 1.0
+
+# Projenin kaynak kod dizini
+INPUT = .
+
+# Projenin başlık dosyası dizini
+INPUT += .
+
+# Dokümantasyon çıktısı dizini
+OUTPUT_DIRECTORY = documentation
+
+# HTML formatında dokümantasyon oluşturma
+GENERATE_HTML = YES
+
+# Doxygen yorum biçimi
+JAVADOC_AUTOBRIEF = YES
+
+# Sınıf diyagramları için Graphviz kullanma
+HAVE_DOT = YES

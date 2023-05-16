@@ -1,0 +1,54 @@
+\hypertarget{struct_counter__t}{}\doxysection{Counter\+\_\+t Struct Reference}
+\label{struct_counter__t}\index{Counter\_t@{Counter\_t}}
+
+
+Sayac yapisini temsil eden \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turu.  
+
+
+
+
+{\ttfamily \#include $<$counter.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_counter__t_aa60ab087ed16d96829d8a7ae1fe023c1}\label{struct_counter__t_aa60ab087ed16d96829d8a7ae1fe023c1}} 
+uint8\+\_\+t {\bfseries use}
+\begin{DoxyCompactList}\small\item\em Sayaç kullanım durumu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_abd5caca4e33d2a54a97dcf6c21c8150e}\label{struct_counter__t_abd5caca4e33d2a54a97dcf6c21c8150e}} 
+uint8\+\_\+t {\bfseries enable}
+\begin{DoxyCompactList}\small\item\em Sayaç etkin durumu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_a177457a70668abfa4508aaab1a87c302}\label{struct_counter__t_a177457a70668abfa4508aaab1a87c302}} 
+char {\bfseries name} \mbox{[}16\mbox{]}
+\begin{DoxyCompactList}\small\item\em Sayaç ismi. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_aadecefcb9748ed847d5ced60d021b888}\label{struct_counter__t_aadecefcb9748ed847d5ced60d021b888}} 
+uint16\+\_\+t {\bfseries count}
+\begin{DoxyCompactList}\small\item\em Sayaç değeri. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_ac55af2d0869b2350da9c19a5930d4fe9}\label{struct_counter__t_ac55af2d0869b2350da9c19a5930d4fe9}} 
+uint16\+\_\+t {\bfseries target}
+\begin{DoxyCompactList}\small\item\em Sayaç hedef değeri. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_a266bc083b3d5697629b0f72950995fca}\label{struct_counter__t_a266bc083b3d5697629b0f72950995fca}} 
+uint8\+\_\+t $\ast$ {\bfseries flag}
+\begin{DoxyCompactList}\small\item\em Sayaç bayrağı (flag) değişkeni. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_counter__t_a22ea706144d2403ee5d6f36a5fd899d9}\label{struct_counter__t_a22ea706144d2403ee5d6f36a5fd899d9}} 
+void($\ast$ {\bfseries callback\+\_\+function} )(void)
+\begin{DoxyCompactList}\small\item\em Sayaç geri çağırma işlevi (callback function). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sayac yapisini temsil eden \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turu. 
+
+\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} yapisi, bir sayacin durumunu, ozelliklerini ve iliskili bilgilerini iceren veri yapisini tanimlar.
+\begin{DoxyItemize}
+\item use\+: Sayacin kullanılabilir olup olmadığını belirten bir bayrak
+\item enable\+: Sayacin etkin olup olmadigini belirten bir bayrak
+\item name\+: Sayac ismini temsil eden karakter dizisi (en fazla 16 karakter)
+\item count\+: Sayac degeri
+\item target\+: Sayac hedef degeri
+\item flag\+: Sayac icin belirtilmis olan bayrak (flag) degişkeninin adresini tutan isaretci
+\item callback\+\_\+function\+: Sayac icin belirtilmis olan geri çagirma islevinin (callback function) adresini tutan isaretci 
+\end{DoxyItemize}
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{counter_8h}{counter.\+h}}\end{DoxyCompactItemize}

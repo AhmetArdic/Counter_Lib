@@ -1,0 +1,175 @@
+\hypertarget{counter_8c}{}\doxysection{counter.\+c File Reference}
+\label{counter_8c}\index{counter.c@{counter.c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}counter.\+h\char`\"{}}\newline
+Include dependency graph for counter.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{counter_8c_a9585d08d345ce32c97c66808fa1d3cd7}\label{counter_8c_a9585d08d345ce32c97c66808fa1d3cd7}} 
+\#define {\bfseries MAX\+\_\+\+COUNTER}~8
+\begin{DoxyCompactList}\small\item\em Maksimum sayac sayisi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$ \mbox{\hyperlink{counter_8c_a1d828ce45abca137bbbda7f69665923b}{counter\+\_\+add}} (char $\ast$name, uint8\+\_\+t inital\+\_\+enable, uint16\+\_\+t target, uint8\+\_\+t $\ast$flag, void($\ast$callback)(void))
+\begin{DoxyCompactList}\small\item\em Fonksiyon, yeni bir sayac olusturur ve global sayac listesine eklenmesini saglar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8c_ad364fa4e15e88a72d7c0626ea98be8ac}{counter\+\_\+delete}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Fonksiyon, belirtilen sayaci siler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8c_a47ad5db7cadc8c226aa61a201e888094}{counter\+\_\+start}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Bir sayacin baslatilmasini saglayan fonksiyon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8c_aea337d5e125c883e6aa1ff65ec92f006}{counter\+\_\+stop}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Bir sayacin durdurulmasini saglayan fonksiyon. \end{DoxyCompactList}\item 
+int16\+\_\+t \mbox{\hyperlink{counter_8c_a93e7fd3747751035ed06e4a59477a0aa}{counter\+\_\+get\+\_\+count}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Counter\textquotesingle{}in geçerli sayac degerini donduren bir fonksiyon. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{counter_8c_ad5ba456c3dce8f6c2d099e94dc097ceb}{counter\+\_\+get\+\_\+name}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Bir sayacin ismini donduren fonksiyon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8c_ae1e71d72aebac425caf18f49463cf8ee}{counter\+\_\+call}} (void)
+\begin{DoxyCompactList}\small\item\em Sayacları isleyen fonksiyon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{counter_8c_a1d828ce45abca137bbbda7f69665923b}\label{counter_8c_a1d828ce45abca137bbbda7f69665923b}} 
+\index{counter.c@{counter.c}!counter\_add@{counter\_add}}
+\index{counter\_add@{counter\_add}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_add()}{counter\_add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$ counter\+\_\+add (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{uint8\+\_\+t}]{inital\+\_\+enable,  }\item[{uint16\+\_\+t}]{target,  }\item[{uint8\+\_\+t $\ast$}]{flag,  }\item[{void($\ast$)(void)}]{callback }\end{DoxyParamCaption})}
+
+
+
+Fonksiyon, yeni bir sayac olusturur ve global sayac listesine eklenmesini saglar. 
+
+Bu fonksiyon, verilen parametrelerle yeni bir sayac oluşturur ve global sayac listesine sayaci ekler. Eğer toplam sayac sayisi MAX\+\_\+\+COUNTER\textquotesingle{}a ulasirsa, MAX\+\_\+\+COUNTER degerine esitlenir ve yeni sayac eklemeden NULL dondurulur. Eğer toplam sayac sayisi negatif bir degere duserse, 0\textquotesingle{}a esitlenir ve ekleme islemine devam edilir. Olusturulan sayacin yapisal isaretcisi dondurulur. Baslangicta etkinlestirme bayragi (inital\+\_\+enable) 1 ise sayac baslatilir, 0 ise durdurulur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Sayac adı \\
+\hline
+{\em inital\+\_\+enable} & Başlangıcta etkinlestirilip etkinlestirilmeyecegi bilgisi (0\+: devre disi, 1\+: etkin) \\
+\hline
+{\em target} & Hedef deger \\
+\hline
+{\em flag} & Sayac hedefe ulastiginda kaldirilacak bayragin isaretcisi \\
+\hline
+{\em callback} & Sayac hedefe ulaştigina çagrilacak geri çagirma islevi (callback function) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Counter\+\_\+t$\ast$ Olusturulan yeni sayacin isaretcisi (NULL, eger sayac ekleme islemi basarisiz ise) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{counter_8c_ae1e71d72aebac425caf18f49463cf8ee}\label{counter_8c_ae1e71d72aebac425caf18f49463cf8ee}} 
+\index{counter.c@{counter.c}!counter\_call@{counter\_call}}
+\index{counter\_call@{counter\_call}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_call()}{counter\_call()}}
+{\footnotesize\ttfamily void counter\+\_\+call (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Sayacları isleyen fonksiyon. 
+
+Bu fonksiyon, timer interrupt icerisinde cagrilir ve counter\+\_\+list dizisindeki sayacları periyodik olarak isler. Her bir sayac icin asagidaki islemleri gerceklestirir\+:
+\begin{DoxyItemize}
+\item Sayac kullaniliyorsa ve etkinse, sayaç degerini bir artirir.
+\item Sayac hedef degeri asildiginda, sayac degerini sifirlar.
+\item Sayac icin belirtilmis olan geri çagırma islevini (callback function) çagirir (eger varsa).
+\item Sayac icin belirtilmic olan bayrak (flag) degiskenini 1 olarak ayarlar (eger varsa).
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Bu fonksiyon, MAX\+\_\+\+COUNTER sabitinde belirtilen maksimum sayaç sayisini kullanir ve counter\+\_\+list dizisindeki sayaclari isler. 
+
+Bu fonksiyonun verimli sekilde calismasi icin void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback(\+TIM\+\_\+\+Handle\+Type\+Def $\ast$htim) icerisinde cagrilmalidir. 
+\end{DoxyNote}
+\mbox{\Hypertarget{counter_8c_ad364fa4e15e88a72d7c0626ea98be8ac}\label{counter_8c_ad364fa4e15e88a72d7c0626ea98be8ac}} 
+\index{counter.c@{counter.c}!counter\_delete@{counter\_delete}}
+\index{counter\_delete@{counter\_delete}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_delete()}{counter\_delete()}}
+{\footnotesize\ttfamily void counter\+\_\+delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Fonksiyon, belirtilen sayaci siler. 
+
+Bu fonksiyon, belirtilen sayaci siler. Eger sayacin isaretcisi NULL ise, hicbir islem yapılmaz ve fonksiyon sonlanir. Aksi halde, {\ttfamily counter\+\_\+list} dizisindeki sayaclari kontrol eder. Kullanımda olan bir sayacın isaretcisi verilen sayacin isaretcisiyle eslesirse, sayacin tum alanları sifirlanir ({\ttfamily (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}})\{0x00\}} ile), toplam sayacin sayisi bir azaltilir ve fonksiyon sonlanir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & Silinecek sayacin işaretçisi \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{counter_8c_a93e7fd3747751035ed06e4a59477a0aa}\label{counter_8c_a93e7fd3747751035ed06e4a59477a0aa}} 
+\index{counter.c@{counter.c}!counter\_get\_count@{counter\_get\_count}}
+\index{counter\_get\_count@{counter\_get\_count}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_get\_count()}{counter\_get\_count()}}
+{\footnotesize\ttfamily int16\+\_\+t counter\+\_\+get\+\_\+count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Counter\textquotesingle{}in geçerli sayac degerini donduren bir fonksiyon. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gısterdigi sayactan gecerli sayac degerini dondurur. Gecerli sayac degeri, \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} yapisi icindeki \char`\"{}count\char`\"{} alaninda saklanır.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turunde bir isaretci. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gecerli sayac degeri. Eger counter isaretcisi NULL ise -\/1 dondurur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{counter_8c_ad5ba456c3dce8f6c2d099e94dc097ceb}\label{counter_8c_ad5ba456c3dce8f6c2d099e94dc097ceb}} 
+\index{counter.c@{counter.c}!counter\_get\_name@{counter\_get\_name}}
+\index{counter\_get\_name@{counter\_get\_name}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_get\_name()}{counter\_get\_name()}}
+{\footnotesize\ttfamily char $\ast$ counter\+\_\+get\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Bir sayacin ismini donduren fonksiyon. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gosterdigi sayacin ismini dondurur. Eger counter isaretcisi NULL ise NULL dondurur.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} türünde bir isaretci. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sayac ismini temsil eden bir karakter dizisi. Eğer counter isaretsisi NULL ise NULL dondurur. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{counter_8c_a47ad5db7cadc8c226aa61a201e888094}\label{counter_8c_a47ad5db7cadc8c226aa61a201e888094}} 
+\index{counter.c@{counter.c}!counter\_start@{counter\_start}}
+\index{counter\_start@{counter\_start}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_start()}{counter\_start()}}
+{\footnotesize\ttfamily void counter\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Bir sayacin baslatilmasini saglayan fonksiyon. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gosterdigi sayaci baslatir. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac baslatildiginda \char`\"{}enable\char`\"{} alani 1 olarak ayarlanir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turunde bir isaretci. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{counter_8c_aea337d5e125c883e6aa1ff65ec92f006}\label{counter_8c_aea337d5e125c883e6aa1ff65ec92f006}} 
+\index{counter.c@{counter.c}!counter\_stop@{counter\_stop}}
+\index{counter\_stop@{counter\_stop}!counter.c@{counter.c}}
+\doxysubsubsection{\texorpdfstring{counter\_stop()}{counter\_stop()}}
+{\footnotesize\ttfamily void counter\+\_\+stop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Bir sayacin durdurulmasini saglayan fonksiyon. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gosterdigi sayacı durdurur. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac durduruldugunda \char`\"{}enable\char`\"{} alanı 0 olarak ayarlanir ve \char`\"{}count\char`\"{} alanı sifirlanir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turunde bir isaretci. \\
+\hline
+\end{DoxyParams}

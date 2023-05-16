@@ -1,3 +1,7 @@
+/**
+ * @file counter.c
+ */
+
 #include <stdint.h>
 #include <string.h>
 

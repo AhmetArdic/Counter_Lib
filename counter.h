@@ -1,4 +1,8 @@
 /**
+ * @file counter.h
+ */
+
+/**
  * @mainpage Counter_Lib Dokümantasyonu
  *
  * @section intro_sec Giriş
