@@ -10,7 +10,9 @@ var searchData=
   ['counter_5fget_5fcount_7',['counter_get_count',['../counter_8c.html#a93e7fd3747751035ed06e4a59477a0aa',1,'counter_get_count(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#a93e7fd3747751035ed06e4a59477a0aa',1,'counter_get_count(Counter_t *counter):&#160;counter.c']]],
   ['counter_5fget_5fname_8',['counter_get_name',['../counter_8c.html#ad5ba456c3dce8f6c2d099e94dc097ceb',1,'counter_get_name(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#ad5ba456c3dce8f6c2d099e94dc097ceb',1,'counter_get_name(Counter_t *counter):&#160;counter.c']]],
   ['counter_5flib_20dokümantasyonu_9',['Counter_Lib Dokümantasyonu',['../index.html',1,'']]],
-  ['counter_5fstart_10',['counter_start',['../counter_8c.html#a47ad5db7cadc8c226aa61a201e888094',1,'counter_start(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#a47ad5db7cadc8c226aa61a201e888094',1,'counter_start(Counter_t *counter):&#160;counter.c']]],
-  ['counter_5fstop_11',['counter_stop',['../counter_8c.html#aea337d5e125c883e6aa1ff65ec92f006',1,'counter_stop(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#aea337d5e125c883e6aa1ff65ec92f006',1,'counter_stop(Counter_t *counter):&#160;counter.c']]],
-  ['counter_5ft_12',['Counter_t',['../struct_counter__t.html',1,'']]]
+  ['counter_5fpause_10',['counter_pause',['../counter_8c.html#a662c5c99d756fbe0baeab60aaaa2145b',1,'counter_pause(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#a662c5c99d756fbe0baeab60aaaa2145b',1,'counter_pause(Counter_t *counter):&#160;counter.c']]],
+  ['counter_5freset_11',['counter_reset',['../counter_8c.html#aec7d445eb1b10ac23041caa0072a3dcb',1,'counter_reset(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#aec7d445eb1b10ac23041caa0072a3dcb',1,'counter_reset(Counter_t *counter):&#160;counter.c']]],
+  ['counter_5fstart_12',['counter_start',['../counter_8c.html#a47ad5db7cadc8c226aa61a201e888094',1,'counter_start(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#a47ad5db7cadc8c226aa61a201e888094',1,'counter_start(Counter_t *counter):&#160;counter.c']]],
+  ['counter_5fstop_13',['counter_stop',['../counter_8c.html#aea337d5e125c883e6aa1ff65ec92f006',1,'counter_stop(Counter_t *counter):&#160;counter.c'],['../counter_8h.html#aea337d5e125c883e6aa1ff65ec92f006',1,'counter_stop(Counter_t *counter):&#160;counter.c']]],
+  ['counter_5ft_14',['Counter_t',['../struct_counter__t.html',1,'']]]
 ];

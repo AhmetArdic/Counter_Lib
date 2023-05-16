@@ -105,6 +105,12 @@ Functions</h2></td></tr>
 <tr class="memitem:aea337d5e125c883e6aa1ff65ec92f006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8c.html#aea337d5e125c883e6aa1ff65ec92f006">counter_stop</a> (<a class="el" href="struct_counter__t.html">Counter_t</a> *counter)</td></tr>
 <tr class="memdesc:aea337d5e125c883e6aa1ff65ec92f006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bir sayacin durdurulmasini saglayan fonksiyon.  <br /></td></tr>
 <tr class="separator:aea337d5e125c883e6aa1ff65ec92f006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a662c5c99d756fbe0baeab60aaaa2145b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8c.html#a662c5c99d756fbe0baeab60aaaa2145b">counter_pause</a> (<a class="el" href="struct_counter__t.html">Counter_t</a> *counter)</td></tr>
+<tr class="memdesc:a662c5c99d756fbe0baeab60aaaa2145b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bir sayacin durdurulmasini saglayan fonksiyon.  <br /></td></tr>
+<tr class="separator:a662c5c99d756fbe0baeab60aaaa2145b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec7d445eb1b10ac23041caa0072a3dcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8c.html#aec7d445eb1b10ac23041caa0072a3dcb">counter_reset</a> (<a class="el" href="struct_counter__t.html">Counter_t</a> *counter)</td></tr>
+<tr class="memdesc:aec7d445eb1b10ac23041caa0072a3dcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonksiyon, belirtilen sayacin degerini resetler.  <br /></td></tr>
+<tr class="separator:aec7d445eb1b10ac23041caa0072a3dcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e7fd3747751035ed06e4a59477a0aa"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="counter_8c.html#a93e7fd3747751035ed06e4a59477a0aa">counter_get_count</a> (<a class="el" href="struct_counter__t.html">Counter_t</a> *counter)</td></tr>
 <tr class="memdesc:a93e7fd3747751035ed06e4a59477a0aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter'in geçerli sayac degerini donduren bir fonksiyon.  <br /></td></tr>
 <tr class="separator:a93e7fd3747751035ed06e4a59477a0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,6 +291,60 @@ Bu fonksiyonun verimli sekilde calismasi icin void HAL_TIM_PeriodElapsedCallback
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Sayac ismini temsil eden bir karakter dizisi. Eğer counter isaretsisi NULL ise NULL dondurur. </dd></dl>
+
+</div>
+</div>
+<a id="a662c5c99d756fbe0baeab60aaaa2145b" name="a662c5c99d756fbe0baeab60aaaa2145b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662c5c99d756fbe0baeab60aaaa2145b">&#9670;&#160;</a></span>counter_pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void counter_pause </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_counter__t.html">Counter_t</a> *&#160;</td>
+          <td class="paramname"><em>counter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bir sayacin durdurulmasini saglayan fonksiyon. </p>
+<p>Bu fonksiyon, bir <a class="el" href="struct_counter__t.html" title="Sayac yapisini temsil eden Counter_t turu.">Counter_t</a> isaretcisi alir ve isaretcinin gosterdigi sayaci durdurur. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac baslatildiginda "enable" alani 0 olarak ayarlanir.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">counter</td><td><a class="el" href="struct_counter__t.html" title="Sayac yapisini temsil eden Counter_t turu.">Counter_t</a> turunde bir isaretci. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aec7d445eb1b10ac23041caa0072a3dcb" name="aec7d445eb1b10ac23041caa0072a3dcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec7d445eb1b10ac23041caa0072a3dcb">&#9670;&#160;</a></span>counter_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void counter_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_counter__t.html">Counter_t</a> *&#160;</td>
+          <td class="paramname"><em>counter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonksiyon, belirtilen sayacin degerini resetler. </p>
+<p>Bu fonksiyon, bir <a class="el" href="struct_counter__t.html" title="Sayac yapisini temsil eden Counter_t turu.">Counter_t</a> isaretcisi alir ve isaretcinin gosterdigi sayacin degerini resetler. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac baslatildiginda "count" alani 0 olarak ayarlanir.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">counter</td><td>Resetlenecek sayacin işaretçisi </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -129,6 +129,44 @@ void counter_stop(Counter_t* counter){
 
 
 /**
+ * @brief Bir sayacin durdurulmasini saglayan fonksiyon.
+ *
+ * Bu fonksiyon, bir Counter_t isaretcisi alir ve isaretcinin gosterdigi sayaci durdurur.
+ * Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir.
+ * Sayac baslatildiginda "enable" alani 0 olarak ayarlanir.
+ *
+ * @param counter Counter_t turunde bir isaretci.
+ */
+void counter_pause(Counter_t* counter){
+
+	if(counter == NULL){
+		return;
+	}
+
+	counter->enable = 0;
+}
+
+
+/**
+ * @brief Fonksiyon, belirtilen sayacin degerini resetler.
+ *
+ * Bu fonksiyon, bir Counter_t isaretcisi alir ve isaretcinin gosterdigi sayacin degerini resetler.
+ * Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir.
+ * Sayac baslatildiginda "count" alani 0 olarak ayarlanir.
+ *
+ * @param counter Resetlenecek sayacin işaretçisi
+ */
+void counter_reset(Counter_t* counter){
+
+	if(counter == NULL){
+		return;
+	}
+
+	counter->count = 0;
+}
+
+
+/**
  * @brief Counter'in geçerli sayac degerini donduren bir fonksiyon.
  *
  * Bu fonksiyon, bir Counter_t isaretcisi alir ve isaretcinin gısterdigi sayactan

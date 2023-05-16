@@ -18,6 +18,10 @@ void \mbox{\hyperlink{counter_8h_a47ad5db7cadc8c226aa61a201e888094}{counter\+\_\
 \begin{DoxyCompactList}\small\item\em Bir sayacin baslatilmasini saglayan fonksiyon. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{counter_8h_aea337d5e125c883e6aa1ff65ec92f006}{counter\+\_\+stop}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
 \begin{DoxyCompactList}\small\item\em Bir sayacin durdurulmasini saglayan fonksiyon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8h_a662c5c99d756fbe0baeab60aaaa2145b}{counter\+\_\+pause}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Bir sayacin durdurulmasini saglayan fonksiyon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{counter_8h_aec7d445eb1b10ac23041caa0072a3dcb}{counter\+\_\+reset}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
+\begin{DoxyCompactList}\small\item\em Fonksiyon, belirtilen sayacin degerini resetler. \end{DoxyCompactList}\item 
 int16\+\_\+t \mbox{\hyperlink{counter_8h_a93e7fd3747751035ed06e4a59477a0aa}{counter\+\_\+get\+\_\+count}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
 \begin{DoxyCompactList}\small\item\em Counter\textquotesingle{}in geçerli sayac degerini donduren bir fonksiyon. \end{DoxyCompactList}\item 
 char $\ast$ \mbox{\hyperlink{counter_8h_ad5ba456c3dce8f6c2d099e94dc097ceb}{counter\+\_\+get\+\_\+name}} (\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$counter)
@@ -135,6 +139,40 @@ Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcis
 \begin{DoxyReturn}{Returns}
 Sayac ismini temsil eden bir karakter dizisi. Eğer counter isaretsisi NULL ise NULL dondurur. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{counter_8h_a662c5c99d756fbe0baeab60aaaa2145b}\label{counter_8h_a662c5c99d756fbe0baeab60aaaa2145b}} 
+\index{counter.h@{counter.h}!counter\_pause@{counter\_pause}}
+\index{counter\_pause@{counter\_pause}!counter.h@{counter.h}}
+\doxysubsubsection{\texorpdfstring{counter\_pause()}{counter\_pause()}}
+{\footnotesize\ttfamily void counter\+\_\+pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Bir sayacin durdurulmasini saglayan fonksiyon. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gosterdigi sayaci durdurur. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac baslatildiginda \char`\"{}enable\char`\"{} alani 0 olarak ayarlanir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} turunde bir isaretci. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{counter_8h_aec7d445eb1b10ac23041caa0072a3dcb}\label{counter_8h_aec7d445eb1b10ac23041caa0072a3dcb}} 
+\index{counter.h@{counter.h}!counter\_reset@{counter\_reset}}
+\index{counter\_reset@{counter\_reset}!counter.h@{counter.h}}
+\doxysubsubsection{\texorpdfstring{counter\_reset()}{counter\_reset()}}
+{\footnotesize\ttfamily void counter\+\_\+reset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} $\ast$}]{counter }\end{DoxyParamCaption})}
+
+
+
+Fonksiyon, belirtilen sayacin degerini resetler. 
+
+Bu fonksiyon, bir \mbox{\hyperlink{struct_counter__t}{Counter\+\_\+t}} isaretcisi alir ve isaretcinin gosterdigi sayacin degerini resetler. Eger counter isaretcisi NULL ise fonksiyon hemen sonlanir. Sayac baslatildiginda \char`\"{}count\char`\"{} alani 0 olarak ayarlanir.
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter} & Resetlenecek sayacin işaretçisi \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{counter_8h_a47ad5db7cadc8c226aa61a201e888094}\label{counter_8h_a47ad5db7cadc8c226aa61a201e888094}} 
 \index{counter.h@{counter.h}!counter\_start@{counter\_start}}
 \index{counter\_start@{counter\_start}!counter.h@{counter.h}}

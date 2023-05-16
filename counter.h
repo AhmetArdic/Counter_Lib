@@ -66,6 +66,8 @@ Counter_t* counter_add(char* name, uint8_t inital_enable, uint16_t target, uint8
 void counter_delete(Counter_t* counter);
 void counter_start(Counter_t* counter);
 void counter_stop(Counter_t* counter);
+void counter_pause(Counter_t* counter);
+void counter_reset(Counter_t* counter);
 int16_t counter_get_count(Counter_t* counter);
 char* counter_get_name(Counter_t* counter);
 
